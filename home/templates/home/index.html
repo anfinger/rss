@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//DE">
+<html lang="de">
+<head>
+    <title>Startseite</title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" media="screen" />
+
+</head>
+<body>
+<p>Meine Inhalte</p>
+<br/>
+<p>
+  {% for i in aktuelles %}
+  <div>
+    <p>published: {{ i.published_date }}</p>
+    <h3><a href="{{i.reiselink}}">{{ i.title }}</a></h3>
+    <p>{{ i.text|linebreaks }}</p>
+    Details zur Reise finden Sie <a href="{{i.reiselink}}">hier</a>.
+  {% endfor %}
+  </div>
+</p>
+</body>
+</html>
