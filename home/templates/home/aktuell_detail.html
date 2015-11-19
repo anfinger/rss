@@ -7,6 +7,7 @@
                 {{ aktuell.published_date }}
             </div>
         {% endif %}
+        <a class="btn btn-default" href="{% url 'aktuell_edit' pk=aktuell.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1>{{ aktuell.title }}</h1>
         <p>{{ aktuell.text|linebreaks }}</p>
     </div>
