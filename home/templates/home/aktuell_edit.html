@@ -1,7 +1,7 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-    <h1>Neuer Eintrag Aktuelles</h1>
+    <h1>Eintrag in "Aktuelles" bearbeiten</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Sichern</button>
