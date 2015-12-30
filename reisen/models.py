@@ -18,6 +18,7 @@ class Reise(models.Model):
     reiseID = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     autor = models.ForeignKey('auth.User')
     titel = models.CharField(max_length=1024)
+    untertitel = models.CharField(max_length=1024, default='')
     einleitung = models.TextField()
     tage = models.ManyToManyField(Tag, through='Reisetage')
     reiselink = models.URLField()
