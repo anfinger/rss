@@ -4,6 +4,8 @@ from django.utils import timezone
 # Create your models here.
 
 class Aktuelles(models.Model):
+    class Meta:
+        verbose_name_plural = "Aktuelles"    
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     text = models.TextField()
